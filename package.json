@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon --exec tsx server.js"
   },
   "type": "module",
   "repository": {
@@ -24,7 +24,8 @@
     "@prisma/orm-postgres": "^8.0.0-rc.13",
     "dotenv": "^18.0.4",
     "express": "^5.2.1",
-    "pg": "^8.23.0"
+    "pg": "^8.23.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "prisma": "^7.10.0",
