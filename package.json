@@ -1,0 +1,25 @@
+{
+  "name": "task-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kambatukebele/task-APi-with-expressjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kambatukebele/task-APi-with-expressjs/issues"
+  },
+  "homepage": "https://github.com/Kambatukebele/task-APi-with-expressjs#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1"
+  }
+}
