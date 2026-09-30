@@ -24,7 +24,9 @@ enum Status {
 
 model Task {
   id                Int       @id @default(autoincrement())
-  title             String
+  title             String    @unique
   status            Status    @default(Not_started)
   due_date          DateTime
+  createAt          DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
 }

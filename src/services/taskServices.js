@@ -7,9 +7,30 @@ export const createTaskService = async (body) => {
   return createTask;
 };
 
-export const getTasksService = async () => {
-  const getTasks = await prisma.task.findMany();
-  return getTasks;
+export const getTasksService = async (status, limit, offset) => {
+  if (status !== undefined) {
+    const tasks = await prisma.task.findMany({
+      where: { status },
+      orderBy: {
+        createAt: "desc",
+      },
+      skip: offset,
+      take: limit,
+    });
+    const count = await prisma.task.count({
+      where: { status },
+    });
+    return { tasks, count };
+  }
+  const tasks = await prisma.task.findMany({
+    orderBy: {
+      createAt: "desc",
+    },
+    skip: offset,
+    take: limit,
+  });
+  const count = await prisma.task.count();
+  return { tasks, count };
 };
 
 export const getTaskService = async (id) => {

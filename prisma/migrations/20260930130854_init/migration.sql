@@ -7,6 +7,11 @@ CREATE TABLE "Task" (
     "title" TEXT NOT NULL,
     "status" "Status" NOT NULL DEFAULT 'Not_started',
     "due_date" TIMESTAMP(3) NOT NULL,
+    "createAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "Task_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Task_title_key" ON "Task"("title");
