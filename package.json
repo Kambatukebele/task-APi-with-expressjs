@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+    "test": "vitest",
     "dev": "nodemon --exec tsx server.js"
   },
   "type": "module",
@@ -28,8 +29,10 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
+    "nodemon": "^3.1.14",
     "prisma": "^7.10.0",
     "tsx": "^4.23.15",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
   }
 }
